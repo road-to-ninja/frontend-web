@@ -8,9 +8,14 @@ import { ProfileService } from '../../services/profile/profile.service';
   styleUrls: ['./menu.component.css'],
 })
 export class MenuComponent implements OnInit {
-  constructor(private router: Router) {}
+  public profileUsername = '';
 
-  ngOnInit() {}
+  constructor(private router: Router, private profileService: ProfileService) {
+  }
+
+  ngOnInit() {
+    this.subscribeForCurrentProfile();
+  }
 
   onRedirectToLogin() {
     this.router.navigate(['/login']);
@@ -23,5 +28,11 @@ export class MenuComponent implements OnInit {
   onLogout() {
     ProfileService.logout();
     this.router.navigate(['/']);
+  }
+
+  subscribeForCurrentProfile() {
+    this.profileService.getCurrentProfil().subscribe((profile: string) => {
+      this.profileUsername = profile;
+    });
   }
 }
