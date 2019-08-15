@@ -28,6 +28,7 @@ import { ProjectService } from './services/project/project.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
 import { HomeComponent } from './components/home/home.component';
+import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -77,6 +78,9 @@ import { HomeComponent } from './components/home/home.component';
     ModalTrelloLikeService,
     RequiredProjectsEditorService,
     ToastrService,
+    {
+      provide: LocationStrategy, useClass: HashLocationStrategy
+    },
   ],
   bootstrap: [AppComponent],
 })
