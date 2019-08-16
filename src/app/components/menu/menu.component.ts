@@ -29,6 +29,10 @@ export class MenuComponent implements OnInit {
   }
 
   getCurrentUserNanem() {
-    return ProfileService.getCurrentUserToken().name;
+    if (ProfileService.getCurrentUserToken()) {
+      return ProfileService.getCurrentUserToken().name;
+    }
+    return '';
+
   }
 }
