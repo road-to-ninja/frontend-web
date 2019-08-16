@@ -28,7 +28,8 @@ import { ProjectService } from './services/project/project.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
 import { HomeComponent } from './components/home/home.component';
-import {HashLocationStrategy, LocationStrategy} from "@angular/common";
+import { APP_BASE_HREF } from '@angular/common';
+import { environment } from "../environments/environment";
 
 @NgModule({
   declarations: [
@@ -79,7 +80,7 @@ import {HashLocationStrategy, LocationStrategy} from "@angular/common";
     RequiredProjectsEditorService,
     ToastrService,
     {
-      provide: LocationStrategy, useClass: HashLocationStrategy
+      provide: APP_BASE_HREF, useValue: environment.appURL
     },
   ],
   bootstrap: [AppComponent],
