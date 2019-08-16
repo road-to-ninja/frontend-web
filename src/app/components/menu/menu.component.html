@@ -20,7 +20,12 @@
     <li class="nav-item">
       <div class="nav-link" *ngIf="isUserLoggedIn()">
         <button type="button" class="btn btn-primary btn-sm navbar-btn"
-                (click)="onLogout()"> logout
+                (click)="onLogout()"> Logout
+        </button>
+      </div>
+      <div class="nav-link" *ngIf="!isUserLoggedIn()">
+        <button type="button" class="btn btn-primary btn-sm navbar-btn"
+                (click)="onLogin()"> Login
         </button>
       </div>
     </li>

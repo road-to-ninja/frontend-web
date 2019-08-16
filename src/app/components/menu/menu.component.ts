@@ -28,6 +28,10 @@ export class MenuComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
+  onLogin() {
+    this.router.navigate(['/login']);
+  }
+
   getCurrentUserNanem() {
     if (ProfileService.getCurrentUserToken()) {
       return ProfileService.getCurrentUserToken().name;
