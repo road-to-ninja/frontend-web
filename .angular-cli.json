@@ -20,7 +20,8 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "../node_modules/ngx-toastr/toastr.css"
+        "../node_modules/ngx-toastr/toastr.css",
+        "../node_modules/@fortawesome/fontawesome-free/css/all.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
