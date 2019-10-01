@@ -9,7 +9,11 @@ import { ProfileService } from '../../services/profile/profile.service';
 })
 export class MenuComponent implements OnInit {
 
+  public isUserLogged = false;
+  public isMenuOpened = false;
+
   constructor(private router: Router, private profileService: ProfileService) {
+    this.isUserLogged = ProfileService.isUserLogged();
   }
 
   ngOnInit() {
@@ -17,10 +21,6 @@ export class MenuComponent implements OnInit {
 
   onRedirectToLogin() {
     this.router.navigate(['/login']);
-  }
-
-  isUserLoggedIn(): boolean {
-    return ProfileService.isUserLogged();
   }
 
   onLogout() {
@@ -38,5 +38,9 @@ export class MenuComponent implements OnInit {
     }
     return '';
 
+  }
+
+  toggleMenuStatus() {
+    this.isMenuOpened = !this.isMenuOpened;
   }
 }

@@ -93,3 +93,15 @@ textarea:focus {
   line-height: 20px;
   font-weight: 400;
 }
+
+.horizontal-center {
+  text-align: center;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
