@@ -4,11 +4,10 @@
         <h2>Road to ninja</h2>
       </a>
   </div>
-  <div class="navbar-item lateral right" *ngIf="this.isUserLogged; else login_bouton">
-      <span (click)="toggleMenuStatus()">
-          <i class="fa fa-bars fa-3x"></i>
-      </span>
-  </div>
+  <input class="right" type="checkbox" id="burger-menu-toggle">
+  <label for="burger-menu-toggle" class="burger-menu navbar-item lateral right" *ngIf="this.isUserLogged; else login_bouton">
+      <i class="fa fa-bars fa-3x"></i>
+  </label>
   <!-- sections -->
   <div class="nav-section-container">
     <a class="section-item" href=""> Projects </a>

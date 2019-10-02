@@ -52,7 +52,25 @@
   margin-top: 30px;
 }
 
+#burger-menu-toggle {
+  display: none;
+}
+
+.burger-menu {
+  cursor: pointer;
+}
+
+
 @media screen and (max-width: 720px) {
+
+  .nav-section-container {
+    display: none;
+  }
+
+  #burger-menu-toggle:checked ~ .nav-section-container{
+    display: block;
+  }
+
   .nav-bar .section-item {
     display: block;
     height: 60px;
