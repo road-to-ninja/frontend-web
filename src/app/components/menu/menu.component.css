@@ -1,60 +1,62 @@
+.menu-title-link {
+  cursor: pointer;
+  color: #AF1944;
+}
+
+.navbar-brand {
+  padding: 0 15px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 auto;
+}
+
+.menu-title-link:hover {
+  color: #FF195B;
+}
+
+.header-title-center {
+  margin: 0 auto;
+}
+
+.navbar-item {
+  display: inline-block;
+}
+
+.navbar-item .lateral {
+  margin: 0.3em;
+}
+
+.nav-bar {
+  background-color: cornflowerblue;
+  min-height: 3rem;
+}
+
+.nav-bar .section-item {
+  display: list-item;
+  height: 30px;
+}
+
+.nav-section-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
 @media screen and (max-width: 720px) {
-  .menu-title-rtn {
-    margin-left: 10em;
-  }
-
-  .menu-right-side {
-    margin-left: auto;
-    margin-right: 16px;
-  }
-
-  .menu-title-link {
-    cursor: pointer;
-    color: #af1944;
-  }
-
-  .navbar {
-    height: 50px;
-  }
-
-  .navbar-brand {
-    padding: 0 15px;
-    height: 30px;
-    line-height: 30px;
-    margin: 0 auto;
-  }
-
-  .menu-title-link:hover {
-    color: #ff195b;
-  }
-
-  .header-title-center {
-    margin: 0 auto;
-  }
-
-  .center-title {
-    margin-left: 40%;
-  }
-
-  .navbar-item {
-    display: inline-block;
-  }
-
-  .navbar-item .lateral {
-    margin: 0.3em;
-  }
-
-  .nav-bar {
-    background-color: cornflowerblue;
-    min-height: 3rem;
-  }
-
   .nav-bar .section-item {
     display: list-item;
-    height: 40px;
+    border: #AF1944 solid 1px;
+    height: 60px;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1200px) {
+  .nav-bar .section-item {
+    display: inline-block;
+
   }
 
   .nav-section-container {
-    text-align: center;
+    display: inline-block;
+    float: right;
   }
 }
