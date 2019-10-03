@@ -18,14 +18,6 @@
   margin: 0 auto;
 }
 
-.menu-title-link:hover {
-  color: #FF195B;
-}
-
-.header-title-center {
-  margin: 0 auto;
-}
-
 .navbar-item {
   display: inline-block;
 }
@@ -39,12 +31,17 @@
   min-height: 4.5rem;
 }
 
-.nav-bar .section-item {
+.section-item {
   display: block;
   font-family: "Space Mono", monospace;
   font-size: 1.4em;
   line-height: 50px;
-  color: rgb(255, 255, 255)
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.section-item:hover {
+  color: #cf09b9;
 }
 
 #burger-menu-toggle {
@@ -76,7 +73,7 @@
 
 }
 
-@media screen and (min-width: 721px) and (max-width: 1200px) {
+@media screen and (min-width: 721px) {
   .nav-bar .section-item {
     display: inline-block;
 
