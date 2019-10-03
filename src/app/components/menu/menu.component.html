@@ -9,7 +9,7 @@
       <i class="fa fa-bars fa-3x"></i>
   </label>
   <!-- sections -->
-  <div class="nav-section-container">
+  <div class="nav-section-container" *ngIf="this.isUserLogged">
     <a class="section-item" href=""> Projects </a>
     <a class="section-item btn-logout" href=""> Logout </a>
   </div>
@@ -20,7 +20,7 @@
   <div class="navbar-item lateral right">
     <button
       type="button"
-      class="btn btn-primary btn-sm navbar-btn"
+      class="navbar-btn"
       (click)="onLogin()"
     >
       Login
