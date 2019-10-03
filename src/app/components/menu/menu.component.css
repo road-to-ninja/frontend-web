@@ -5,12 +5,6 @@
   font-size: 21px;
 }
 
-.nav-title {
-  margin: 15px 0 0 20px;
-  cursor: pointer;
-}
-
-
 .navbar-brand {
   padding: 0 15px;
   height: 30px;
@@ -20,10 +14,6 @@
 
 .navbar-item {
   display: inline-block;
-}
-
-.navbar-item .lateral {
-  margin: 0.3em;
 }
 
 .nav-bar {
@@ -50,8 +40,29 @@
 
 .burger-menu {
   cursor: pointer;
-  margin: 15px 20px 0 0;
 }
+
+.navbar-item {
+  margin: 15px 20px 0 0;
+
+}
+
+div.nav-title {
+  margin: 15px 0 0 20px;
+  cursor: pointer;
+}
+
+.navbar-btn {
+  background-color: #ac58c1;
+  border: none;
+  color: white;
+  padding: 12px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+}
+
 
 
 @media screen and (max-width: 720px) {
