@@ -10,11 +10,9 @@ import { ProfileService } from '../../services/profile/profile.service';
 export class MenuComponent implements OnInit {
 
   public isUserLogged = false;
-  public isMenuOpened = false;
 
   constructor(private router: Router, private profileService: ProfileService) {
     this.isUserLogged = ProfileService.isUserLogged();
-    this.isUserLogged = true;
   }
 
   ngOnInit() {
@@ -39,9 +37,5 @@ export class MenuComponent implements OnInit {
     }
     return '';
 
-  }
-
-  toggleMenuStatus() {
-    this.isMenuOpened = !this.isMenuOpened;
   }
 }
