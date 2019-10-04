@@ -3,6 +3,7 @@ import { AuthenticationService } from '../authentication.service';
 import { Router } from '@angular/router';
 import { UserService } from '../../user/user.service';
 import { User } from '../../../models/user';
+import { ProfileService } from '../../../services/profile/profile.service';
 
 @Component({
   selector: 'app-auth-form',
@@ -18,6 +19,7 @@ export class AuthFormComponent implements OnInit {
     private authenticationService: AuthenticationService,
     private router: Router,
     private userService: UserService,
+    private profileService: ProfileService,
   ) {}
 
   ngOnInit() {}
@@ -26,6 +28,7 @@ export class AuthFormComponent implements OnInit {
     const credentials = { username: this.username, password: this.password };
     this.authenticationService.login(credentials).subscribe(
       () => {
+        this.profileService.setIsUserLoggedIn(true);
         this.userService.getCurrentUser().subscribe((user: User) => {
           const redirectionUserProfilePath = `/user/${user.name}`;
           this.router.navigate([redirectionUserProfilePath]);
