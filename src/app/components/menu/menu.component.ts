@@ -11,11 +11,11 @@ export class MenuComponent implements OnInit {
 
   public isUserLogged = false;
 
-  constructor(private router: Router, private profileService: ProfileService) {
-    this.isUserLogged = ProfileService.isUserLogged();
-  }
+  constructor(private router: Router, private profileService: ProfileService) {}
 
   ngOnInit() {
+    this.profileService.getIsUserLoggedIn()
+      .subscribe(isLoggedIn => this.isUserLogged = isLoggedIn);
   }
 
   onRedirectToLogin() {
@@ -23,7 +23,8 @@ export class MenuComponent implements OnInit {
   }
 
   onLogout() {
-    ProfileService.logout();
+    this.profileService.logout();
+    this.isUserLogged = false;
     this.router.navigate(['/']);
   }
 
@@ -36,6 +37,5 @@ export class MenuComponent implements OnInit {
       return ProfileService.getCurrentUserToken().name;
     }
     return '';
-
   }
 }

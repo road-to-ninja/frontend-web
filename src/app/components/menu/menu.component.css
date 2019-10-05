@@ -53,7 +53,7 @@ div.nav-title {
 }
 
 .navbar-btn {
-  background-color: #ac58c1;
+  background-color: #a11ec6;
   border: none;
   color: white;
   padding: 12px 15px;
@@ -61,6 +61,12 @@ div.nav-title {
   text-decoration: none;
   display: inline-block;
   font-size: 1em;
+  cursor: pointer;
+}
+
+.navbar-btn:hover {
+  color: black;
+  background-color: #92eaff;
 }
 
 
@@ -104,6 +110,6 @@ div.nav-title {
   }
 
   .nav-bar {
-    padding: 15px 20px 30px;
+    padding: 15px 20px;
   }
 }

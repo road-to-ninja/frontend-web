@@ -1,12 +1,23 @@
-<div>
-  <div class="alert alert-danger" *ngIf="errors.length > 0">
-    Connexion failed
+<div class="component">
+  <span class="form-title"> Log in </span>
+  <div class="form-error-container">
+    <span *ngIf="errors.length > 0" class="form-error-message">
+      Connexion failed
+    </span>
   </div>
   <div>
-    <label for="username">username</label>
-    <input type="text" id="username" [(ngModel)]="username"> <BR>
-    <label for="password">password</label>
-    <input type="password" id="password" [(ngModel)]="password"> <BR>
-    <input type="button" value="validate" (click)="onSubmitLogin()">
+    <div class="form-set">
+      <label for="username">username</label>
+      <input type="text" id="username" [(ngModel)]="username" autofocus class="form-field"> <BR>
+    </div>
+    <div class="form-set">
+      <label for="password">password</label>
+      <input type="password" id="password" [(ngModel)]="password" class="form-field" autofocus> <BR>
+    </div>
+    <div class="form-set">
+      <button type="button" (click)="onSubmitLogin()" class="btn-sign-in">
+        Sign in
+      </button>
+    </div>
   </div>
 </div>
