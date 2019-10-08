@@ -9,6 +9,20 @@
 
 @media screen and (min-width: 721px) {
   .component {
-    padding: 0 100px;
+    padding: 0 10%;
+  }
+
+  .project-info-component {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .project-info-component {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
   }
 }

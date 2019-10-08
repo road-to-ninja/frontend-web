@@ -57,27 +57,20 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .component {
-    width: 28.7%;
-    display: inline-grid;
-    margin-right: 20px;
-  }
-
-  .btn-change-status {
-    float: left;
-    margin-top: 30px;
-  }
 
   .btn-change-status:hover {
     background-color: #27ec48;
     cursor: pointer;
   }
+
 }
 
-@media screen and (min-width: 1200px) {
-  .component {
-    width: 22.4%;
-    display: inline-grid;
-    margin-right: 20px;
+@media screen and (min-width: 721px) {
+
+  .btn-change-status {
+    display: block;
+    float: none;
+    margin-top: 30px;
   }
+
 }
