@@ -1,15 +1,14 @@
-.info-project {
-  margin-bottom: 20px;
-}
-
 .user-projects-name-color {
   color: #fff;
 }
 
-.owner-title {
-  padding: 0 1.8em;
+.component {
+  padding: 0 20px;
 }
 
-.component {
-  margin-top: 30px;
+
+@media screen and (min-width: 721px) {
+  .component {
+    padding: 0 100px;
+  }
 }
