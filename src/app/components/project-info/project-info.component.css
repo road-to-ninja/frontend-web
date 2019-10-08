@@ -1,23 +1,57 @@
-.float-right {
-  float: right !important;
+.box-container {
+  background-color: #282d69;
+  color: #99a1b3;
+  padding: 20px;
 }
 
-.toggle-requires-btn {
-  margin-bottom: 8px;
+.component {
+  padding: 1.2em 1.8em;
 }
 
-.toggle-requires-btn-size {
-  font-size: 12px;
+.box-title {
+  display: block;
+  margin-bottom: 25px;
+  color: rgb(255, 255, 255);
 }
 
-.status-action {
-  margin-bottom: 30px;
+.box-description {
+  display: block;
 }
 
-.badge {
-  font-size: 100%;
+.badge-status {
+  display: inline-block;
+  margin-top: 60px;
+  padding: 2px 5px;
 }
 
-.required-list {
-  margin-top: 10px;
+.badge-finished {
+  color: #1AC400;
+
+}
+
+.badge-progress {
+  color: #fbff00;
+}
+
+.badge-start {
+  color: #f80ea1;
+}
+
+.btn-change-status {
+  background-color:  rgb(39, 199, 236);
+  color: black;
+  border: none;
+  display: block;
+  margin-top: 55px;
+  float: right;
+  height: 30px;
+  font-size: 0.9em;
+}
+
+.btn-edit-box {
+  float: right;
+}
+
+.btn-edit-icon {
+  color: rgb(39, 199, 236);
 }
