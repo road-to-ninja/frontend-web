@@ -19,6 +19,9 @@
 .nav-bar {
   background-color:#181c44;
   min-height: 4.5rem;
+  position: fixed;
+  top:0;
+  width: 100%;
 }
 
 .section-item {
