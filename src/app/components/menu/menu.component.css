@@ -27,7 +27,7 @@
 .section-item {
   display: block;
   font-family: "Space Mono", monospace;
-  font-size: 1.4em;
+  font-size: 1.2em;
   line-height: 50px;
   color: rgb(255, 255, 255);
   text-decoration: none;
@@ -100,8 +100,8 @@ div.nav-title {
   }
 
   .nav-section-container {
-    display: inline-block;
     float: right;
+    margin-right: 50px;
   }
 
   .burger-menu {
@@ -113,6 +113,6 @@ div.nav-title {
   }
 
   .nav-bar {
-    padding: 15px 20px;
+    padding: 15px 20px 0;
   }
 }
