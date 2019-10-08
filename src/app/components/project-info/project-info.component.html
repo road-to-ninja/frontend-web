@@ -17,6 +17,11 @@
       <span class="box-description">
         {{ project.description }}
       </span>
+      <span class="box-link">
+          <a title="{{ project.data }}" ref="noopener" target="_blank" href="{{ project.data }}">
+              <i class="fas fa-link"></i>
+          </a>
+      </span>
       <span
         class="badge-status"
         [ngClass]="{

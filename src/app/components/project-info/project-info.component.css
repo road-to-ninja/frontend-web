@@ -18,6 +18,16 @@
   display: block;
 }
 
+.box-link {
+  margin-top: 15px;
+  display: block;
+}
+
+.box-link > a {
+  text-decoration: none;
+  color: rgb(39, 199, 236);
+}
+
 .badge-status {
   display: inline-block;
   margin-top: 60px;
