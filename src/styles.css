@@ -95,3 +95,9 @@ textarea:focus {
 .container {
   margin-top: 100px;
 }
+
+@media screen and (min-width: 721px) {
+  .container {
+    margin-top: 150px;
+  }
+}
