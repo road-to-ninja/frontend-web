@@ -5,7 +5,7 @@
 }
 
 .component {
-  padding: 1.2em 1.8em;
+  padding: 1.2em 0;
 }
 
 .box-title {
@@ -54,4 +54,30 @@
 
 .btn-edit-icon {
   color: rgb(39, 199, 236);
+}
+
+@media screen and (min-width: 1024px) {
+  .component {
+    width: 28.7%;
+    display: inline-grid;
+    margin-right: 20px;
+  }
+
+  .btn-change-status {
+    float: left;
+    margin-top: 30px;
+  }
+
+  .btn-change-status:hover {
+    background-color: #27ec48;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .component {
+    width: 22.4%;
+    display: inline-grid;
+    margin-right: 20px;
+  }
 }
