@@ -1,0 +1,23 @@
+.editior-input {
+  width: 100%;
+  font-size: 1em;
+  background-color: rgb(40, 46, 104);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(39, 199, 236);
+  padding: 8px 7px;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.editor-title {
+  margin-bottom: 7px;
+}
+
+.editor-description {
+  margin-bottom: 30px;
+  height: 36%;
+}
+
+.editor-description > textarea {
+  height: 100%;
+}

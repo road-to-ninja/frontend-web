@@ -1,13 +1,13 @@
-<div [formGroup]="projectForm" class="">
-  <input [required]="true" placeholder="* title" [(ngModel)]="projectBeingUpdated.title" class=""
+<div [formGroup]="projectForm" class="editor-title">
+  <input [required]="true" placeholder="* title" [(ngModel)]="projectBeingUpdated.title" class="editior-input"
          formControlName="title" type="text" id="title"
          required value="{{ projectBeingUpdated.title | titlecase }}">
 
 </div>
-<div class="">
-  <textarea class="" placeholder="description"
+<div class="editor-description">
+  <textarea class="editior-input" placeholder="description"
             [(ngModel)]="projectBeingUpdated.description"></textarea>
 </div>
-<div class="">
-  <input class="" placeholder="sources" type="text" id="sources" [(ngModel)]="projectBeingUpdated.data">
+<div class="editor-source">
+  <input class="editior-input" placeholder="sources" type="text" id="sources" [(ngModel)]="projectBeingUpdated.data">
 </div>
