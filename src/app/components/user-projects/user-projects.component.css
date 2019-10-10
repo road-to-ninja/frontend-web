@@ -6,6 +6,12 @@
   padding: 0 20px;
 }
 
+.create-project-icon {
+  float: right;
+  color: rgb(46, 199, 237);
+  cursor: pointer;
+}
+
 
 @media screen and (min-width: 721px) {
   .component {
