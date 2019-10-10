@@ -1,8 +1,25 @@
-<div #modalContainer id="modal" class="modal-trello-edition container-fluid"  [style.display]="getDisplayStyle()">
-      <div class="modal-content-editor" [ngStyle]="editorPositionStyle()">
-        <template class="project-editor-container" #projectEditorContainer> </template>
-      </div>
-      <div class="modal-content-save" [style.marginLeft.px]="this.editorPosition.left">
-        <button class="btn-save" [ngStyle]="saveButtonPosition()" [disabled]="hasFormErrors" (click)="onSaveProject()"> save </button>
-      </div>
+<div
+  #modalContainer
+  id="modal"
+  class="modal-trello-edition container-fluid"
+  [style.display]="getDisplayStyle()"
+>
+  <div class="modal-content-editor" [ngStyle]="editorPositionStyle()">
+    <template class="project-editor-container" #projectEditorContainer>
+    </template>
+  </div>
+  <div
+    class="modal-content-save"
+    [style.marginLeft.px]="this.editorPosition.left"
+    [style.width.px]="this.editorPosition.width"
+  >
+    <button
+      class="btn-save"
+      [ngStyle]="saveButtonPosition()"
+      [disabled]="hasFormErrors"
+      (click)="onSaveProject()"
+    >
+      save
+    </button>
+  </div>
 </div>
