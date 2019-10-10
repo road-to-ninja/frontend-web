@@ -21,7 +21,8 @@
 }
 .modal-content-editor {
   background-color: #fff;
-  padding: 13px 7px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .close {
@@ -40,32 +41,6 @@
 
 .body.modal-trello-edition {
   overflow: hidden;
-}
-
-.edit-requires-button {
-  margin-top: 96px; /* 15% from the top and centered */
-  padding: 15px 20px;
-  width: 400px;
-  clear: left;
-  z-index: 10;
-  position: absolute;
-}
-
-.edit-required-btn {
-  background: #17258c;
-  color: #e6e6e6;
-}
-.edit-required-btn:hover {
-  margin-left: 8px;
-}
-
-.edit-requires-container {
-  background-color: #fefefe;
-  border: 1px solid #888;
-  width: 200px;
-}
-.requires-container-edition {
-  width: 300px;
 }
 
 .selected-margin:hover {
