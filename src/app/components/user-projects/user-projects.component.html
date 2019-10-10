@@ -3,6 +3,9 @@
     <span class="owner-title">
       Projects owner: {{ user.name | titlecase }}
     </span>
+    <span class="create-project-icon">
+      <i class="fa fa-plus-square fa-lg"></i>
+    </span>
   </div>
   <div class="row" *ngIf="!(projects.length > 0)">
     <div>
