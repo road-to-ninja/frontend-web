@@ -35,7 +35,7 @@
 }
 
 .badge-finished {
-  color: #63dc72;
+  color: #3fe854;
 
 }
 
@@ -70,7 +70,7 @@
 @media screen and (min-width: 1024px) {
 
   .btn-change-status:hover {
-    background-color: #27ec48;
+    background-color: #3fe854;
     cursor: pointer;
   }
 
