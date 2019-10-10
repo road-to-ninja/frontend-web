@@ -64,6 +64,7 @@
 
 .btn-edit-icon {
   color: rgb(39, 199, 236);
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1024px) {
