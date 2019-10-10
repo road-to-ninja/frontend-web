@@ -18,8 +18,6 @@ import { ProjectEditComponent } from '../project-edit/project-edit.component';
   styleUrls: ['./modal-trello-like.component.css'],
 })
 export class ModalTrelloLikeComponent implements OnInit, OnDestroy {
-  @ViewChild('requiredProjectsEditorContainer', { read: ViewContainerRef })
-  requiredProjectsEditorContainer;
   requiredProjectsEditorRef: ComponentRef<RequiredProjectsEditorComponent>;
   @ViewChild('projectEditorContainer', { read: ViewContainerRef })
   projectEditorContainer;
@@ -68,20 +66,6 @@ export class ModalTrelloLikeComponent implements OnInit, OnDestroy {
     this.projectEditorPositionSubscription.unsubscribe();
   }
 
-  showRequiredProjectEditorContainer() {
-    this.requiredProjectsEditorContainer.clear();
-    const RequiredProjectsEditorComponentFactory = this.componentFactory.resolveComponentFactory(
-      RequiredProjectsEditorComponent,
-    );
-    this.requiredProjectsEditorRef = this.requiredProjectsEditorContainer.createComponent(
-      RequiredProjectsEditorComponentFactory,
-    );
-    const requiresEditionContainer = <RequiredProjectsEditorComponent>(
-      this.requiredProjectsEditorRef.instance
-    );
-    requiresEditionContainer.currentUserRequiredProjects = this.projectToEdit.requires;
-  }
-
   getDisplayStyle() {
     return this.isModalOpen ? 'block' : 'none';
   }
@@ -94,7 +78,6 @@ export class ModalTrelloLikeComponent implements OnInit, OnDestroy {
     this.projectToEdit = {};
     this.isModalOpen = false;
     this.isCreationMode = false;
-    this.requiredProjectsEditorContainer.clear();
     this.projectEditorContainer.clear();
     this.projectsEditorRef.destroy();
   }
@@ -117,11 +100,6 @@ export class ModalTrelloLikeComponent implements OnInit, OnDestroy {
 
   onSaveProject() {
     this.modalTrelloLikeService.setIsSaveActionDemanded(true);
-    this.requiredProjectsEditorContainer.clear();
-  }
-
-  showRequiredProjectsEditor() {
-    this.showRequiredProjectEditorContainer();
   }
 
   subscribeForIsModalOpen() {
@@ -182,8 +160,10 @@ export class ModalTrelloLikeComponent implements OnInit, OnDestroy {
   }
 
   editorPositionStyle() {
+    console.log(this.editorPosition.height);
     return {
       width: `${this.editorPosition.width}px`,
+      height: `${this.editorPosition.height}px`,
       'margin-left': `${this.editorPosition.left}px`,
       'margin-top': `${this.editorPosition.top}px`,
     };

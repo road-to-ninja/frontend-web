@@ -86,8 +86,9 @@ export class ProjectInfoComponent implements OnInit {
     const infoProjectDOMElement =
       target.parentElement.parentElement.parentElement.parentElement;
     let top = infoProjectDOMElement.getBoundingClientRect().top;
-    const left = infoProjectDOMElement.offsetLeft + 15;
-    const width = infoProjectDOMElement.offsetWidth - 30;
+    const left = infoProjectDOMElement.offsetLeft;
+    const width = infoProjectDOMElement.offsetWidth;
+    const height = infoProjectDOMElement.offsetHeight;
 
     if (!this.hasEnoughVerticalPlace(top)) {
       top = 127;
@@ -96,6 +97,7 @@ export class ProjectInfoComponent implements OnInit {
       top,
       left,
       width,
+      height,
     };
 
     this.modalTrelloLikeService.setProjectToEditContainerPosition(
