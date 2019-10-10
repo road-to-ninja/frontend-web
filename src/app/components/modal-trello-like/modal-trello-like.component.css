@@ -20,8 +20,8 @@
   border: none;
 }
 .modal-content-editor {
-  background-color: #fff;
-  padding: 20px;
+  background-color: #282d69;
+  padding: 11px 12px;
   box-sizing: border-box;
 }
 
@@ -45,4 +45,21 @@
 
 .selected-margin:hover {
   margin-right: 8px;
+}
+
+.btn-save {
+  background-color: rgb(39, 199, 236);
+  color: rgb(0, 0, 0);
+  border: none;
+  display: block;
+  margin-top: 55px;
+  float: left;
+  height: 40px;
+  width: 20%;
+  font-size: 0.9em;
+}
+
+.btn-save:hover {
+  background-color: #27ec48;
+  cursor: pointer;
 }
