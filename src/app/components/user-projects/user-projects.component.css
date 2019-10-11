@@ -10,6 +10,11 @@
   float: right;
   color: rgb(46, 199, 237);
   cursor: pointer;
+  margin-top: -5px;
+}
+
+.component-header {
+  margin-bottom: 30px;
 }
 
 
