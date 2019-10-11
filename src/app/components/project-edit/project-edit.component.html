@@ -1,13 +1,23 @@
 <div [formGroup]="projectForm" class="editor-title">
-  <input [required]="true" placeholder="* title" [(ngModel)]="projectBeingUpdated.title" class="editior-input"
+  <input [required]="true" placeholder="title" [(ngModel)]="projectBeingUpdated.title" class="editior-input"
          formControlName="title" type="text" id="title"
          required value="{{ projectBeingUpdated.title | titlecase }}">
 
 </div>
 <div class="editor-description">
-  <textarea class="editior-input" placeholder="description"
+  <textarea class="editior-input" placeholder="description (optional)"
             [(ngModel)]="projectBeingUpdated.description"></textarea>
 </div>
 <div class="editor-source">
-  <input class="editior-input" placeholder="sources" type="text" id="sources" [(ngModel)]="projectBeingUpdated.data">
+  <input class="editior-input" placeholder="sources/http (optional)" type="text" id="sources" [(ngModel)]="projectBeingUpdated.data">
+</div>
+
+<div *ngIf="title.invalid && (title.dirty || title.touched)"
+class="form-errors">
+  <div *ngIf="title.errors.required">
+    <span class="error-message">
+        <i class="fas fa-exclamation-triangle fa-sm"></i>
+        Title is required. Please fill the title field
+    </span>
+  </div>
 </div>
