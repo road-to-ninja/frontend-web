@@ -17,6 +17,10 @@
   margin-bottom: 30px;
 }
 
+.component-filter {
+  margin-bottom: 30px;
+}
+
 
 @media screen and (min-width: 721px) {
   .component {
