@@ -1,10 +1,10 @@
 <div class="component">
-  <div class="row">
+  <div class="component-header">
     <span class="owner-title">
       Projects owner: {{ user.name | titlecase }}
     </span>
     <span class="create-project-icon">
-      <i class="fa fa-plus-square fa-lg"></i>
+        <app-button-project-add></app-button-project-add>
     </span>
   </div>
   <div class="row" *ngIf="!(projects.length > 0)">

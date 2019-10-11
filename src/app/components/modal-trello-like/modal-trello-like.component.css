@@ -59,6 +59,13 @@
   font-size: 0.9em;
 }
 
+.btn-save:disabled {
+  cursor: none;
+  pointer-events: none;
+  background-color: #75cade;
+  color: gray
+}
+
 .btn-save:hover {
   background-color: #27ec48;
   cursor: pointer;
