@@ -21,3 +21,12 @@
 .editor-description > textarea {
   height: 100%;
 }
+
+.form-errors {
+  margin-top: 20px;
+  color: #f63333;
+}
+
+.error-message {
+  margin-left: 5px;
+}
