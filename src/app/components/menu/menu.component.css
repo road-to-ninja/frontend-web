@@ -42,6 +42,10 @@
   display: none;
 }
 
+.close-icon {
+  display: none;
+}
+
 .burger-menu {
   cursor: pointer;
 }
@@ -85,6 +89,14 @@ div.nav-title {
 
   #burger-menu-toggle:checked ~ .nav-section-container{
     display: block;
+  }
+
+  #burger-menu-toggle:checked ~ .burger-menu .close-icon {
+    display: inline-block;
+  }
+
+  #burger-menu-toggle:checked ~ .burger-menu .open-icon {
+    display: none;
   }
 
   .nav-bar .section-item {
