@@ -160,6 +160,9 @@ export class ModalTrelloLikeComponent implements OnInit, OnDestroy {
   }
 
   editorPositionStyle() {
+    if (!this.hasContainerEnoughVerticalPlace()) {
+      this.editorPosition.top = window.innerHeight / 4;
+    }
     return {
       width: `${this.editorPosition.width}px`,
       height: `${this.editorPosition.height}px`,
@@ -191,5 +194,19 @@ export class ModalTrelloLikeComponent implements OnInit, OnDestroy {
         (this.editorPosition.left + this.editorPosition.width) >
       300
     );
+  }
+
+  hasContainerEnoughVerticalPlace() {
+    const saveButtonMarginTop = 10;
+    const saveButtonContainerHeight = 40;
+    const containerHeight = this.editorPosition.height + saveButtonContainerHeight
+      + saveButtonMarginTop;
+    const space = window.innerHeight - containerHeight;
+    console.log(space);
+    console.log(this.editorPosition.top);
+    if (this.editorPosition.top <= space) {
+      return true;
+    }
+    return false;
   }
 }
