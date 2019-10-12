@@ -44,5 +44,6 @@ export class FilterProjectsComponent implements OnInit {
 
   clearSearchField() {
     this.searchUserInput = '';
+    this.onFilterProjects();
   }
 }
