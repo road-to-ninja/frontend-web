@@ -52,4 +52,12 @@ export class FilterProjectsComponent implements OnInit {
       this.profileUsername = profile;
     });
   }
+
+  isSearchFilled() {
+    return this.searchUserInput !== '';
+  }
+
+  clearSearchField() {
+    this.searchUserInput = '';
+  }
 }
