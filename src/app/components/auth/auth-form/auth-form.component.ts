@@ -25,6 +25,17 @@ export class AuthFormComponent implements OnInit {
   ngOnInit() {}
 
   onSubmitLogin() {
+    this.errors = [];
+    if (!this.username || !this.password) {
+      if (!this.username) {
+        this.errors.push('Username is required');
+      }
+      if (!this.password) {
+        this.errors.push('Password is required');
+      }
+      this.router.navigate(['/login']);
+      return;
+    }
     const credentials = { username: this.username, password: this.password };
     this.authenticationService.login(credentials).subscribe(
       () => {
@@ -35,7 +46,7 @@ export class AuthFormComponent implements OnInit {
         });
       },
       error => {
-        this.errors.push(error.error);
+        this.errors.push(`Sorry, login credentials didn't match`);
         this.router.navigate(['/login']);
       },
     );
