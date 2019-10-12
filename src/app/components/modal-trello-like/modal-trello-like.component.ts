@@ -202,8 +202,6 @@ export class ModalTrelloLikeComponent implements OnInit, OnDestroy {
     const containerHeight = this.editorPosition.height + saveButtonContainerHeight
       + saveButtonMarginTop;
     const space = window.innerHeight - containerHeight;
-    console.log(space);
-    console.log(this.editorPosition.top);
     if (this.editorPosition.top <= space) {
       return true;
     }
