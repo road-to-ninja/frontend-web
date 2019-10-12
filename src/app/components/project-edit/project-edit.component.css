@@ -9,6 +9,10 @@
   border-radius: 3px;
 }
 
+.editior-input:focus {
+  border-color: rgb(0, 255, 149);
+}
+
 .editor-title {
   margin-bottom: 7px;
 }
