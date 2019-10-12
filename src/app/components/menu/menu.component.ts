@@ -33,7 +33,12 @@ export class MenuComponent implements OnInit {
     this.router.navigate(['/login']);
   }
 
-  getCurrentUserNanem() {
+  redirectToUserProjects() {
+    const username = this.getCurrentUserName();
+    this.router.navigate([`user/${username}`]);
+  }
+
+  getCurrentUserName() {
     if (ProfileService.getCurrentUserToken()) {
       return ProfileService.getCurrentUserToken().name;
     }

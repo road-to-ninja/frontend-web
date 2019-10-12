@@ -11,7 +11,7 @@
   </label>
   <!-- sections -->
   <div class="nav-section-container" *ngIf="this.isUserLogged">
-    <a class="section-item" href=""> Projects </a>
+    <a class="section-item" (click)="redirectToUserProjects()"> Projects </a>
     <a class="section-item btn-logout" href="" (click)="onLogout()"> Logout </a>
   </div>
 </nav>
