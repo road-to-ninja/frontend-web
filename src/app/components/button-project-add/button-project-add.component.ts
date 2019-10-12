@@ -23,6 +23,7 @@ export class ButtonProjectAddComponent implements OnInit {
       top: 200,
       left: left - 140,
       width: 280,
+      height: 300,
     });
   }
 }
