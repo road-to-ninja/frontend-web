@@ -10,7 +10,6 @@ export class UserService {
   private apiURL = environment.apiEndPoint;
   constructor(private http: HttpClient) {}
   getUserByName(name) {
-    console.log(this.apiURL);
     return this.http.get(`${this.apiURL}/users/${name}`);
   }
 
