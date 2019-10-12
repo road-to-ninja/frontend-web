@@ -4,6 +4,7 @@
   class="modal-trello-edition container-fluid"
   [style.display]="getDisplayStyle()"
 >
+  <i class="fas fa-times fa-2x close-modal-icon" (click)="closeModal()"></i>
   <div class="modal-content-editor" [ngStyle]="editorPositionStyle()">
     <template class="project-editor-container" #projectEditorContainer>
     </template>

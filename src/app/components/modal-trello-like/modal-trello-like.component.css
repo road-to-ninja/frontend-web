@@ -70,3 +70,16 @@
   background-color: #27ec48;
   cursor: pointer;
 }
+
+.close-modal-icon {
+  float: right;
+  float: right;
+  color: rgb(39, 199, 236);
+  margin-top: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.close-modal-icon:hover {
+  color: #27ec48;
+}
