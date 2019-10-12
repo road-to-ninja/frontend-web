@@ -160,7 +160,6 @@ export class ModalTrelloLikeComponent implements OnInit, OnDestroy {
   }
 
   editorPositionStyle() {
-    console.log(this.editorPosition.height);
     return {
       width: `${this.editorPosition.width}px`,
       height: `${this.editorPosition.height}px`,
