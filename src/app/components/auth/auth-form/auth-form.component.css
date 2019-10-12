@@ -1,5 +1,7 @@
 .form-error-container {
   height: 30px;
+  color: #f63333;
+  margin-bottom: 10px;
 }
 
 .form-title {
@@ -14,6 +16,10 @@
   margin-bottom: 2%;
   font-size: 1.2em;
 
+}
+
+.form-error-message-item {
+  list-style-type: none;
 }
 
 .form-set input {

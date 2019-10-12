@@ -2,7 +2,12 @@
   <span class="form-title"> Log in </span>
   <div class="form-error-container">
     <span *ngIf="errors.length > 0" class="form-error-message">
-      Connexion failed
+      <span *ngFor="let error of errors">
+        <li class="form-error-message-item">
+          <i class="fas fa-exclamation-triangle fa-sm"></i>
+          {{ error }}
+        </li>
+      </span>
     </span>
   </div>
   <div>
