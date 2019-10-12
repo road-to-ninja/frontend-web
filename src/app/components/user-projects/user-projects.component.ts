@@ -54,6 +54,7 @@ export class UserProjectsComponent implements OnInit {
       .getProjectToAddSaved()
       .subscribe(projectSaved => {
         this.projects.push(projectSaved);
+        this.filteredProjects = [...this.projects];
       });
   }
 
@@ -68,6 +69,7 @@ export class UserProjectsComponent implements OnInit {
           return project;
         });
         this.projects = projectsUpdated.slice();
+        this.filteredProjects = [...this.projects];
       });
   }
 
