@@ -4,6 +4,7 @@ import { ProfileService } from '../../services/profile/profile.service';
 import { Subscription } from 'rxjs/Subscription';
 import { ModalTrelloLikeService } from '../../services/modal-trello-like/modal-trello-like.service';
 import { FilterProjectsService } from '../../services/filter/filter-projects.service';
+import { Project } from '../../models/project';
 
 @Component({
   selector: 'app-user-projects',
@@ -12,6 +13,7 @@ import { FilterProjectsService } from '../../services/filter/filter-projects.ser
 })
 export class UserProjectsComponent implements OnInit {
   projects: any = [];
+  filteredProjects: any = [];
   isUserLogged: boolean;
   @Input()
   user: any;
@@ -30,7 +32,10 @@ export class UserProjectsComponent implements OnInit {
     this.subscribeToFilteredProjects();
     this.userProjectService
       .getUserProjects(this.user.uid)
-      .subscribe(projects => (this.projects = projects));
+      .subscribe(projects => {
+        this.projects = projects;
+        this.filteredProjects = [...this.projects];
+      });
     this.isUserLogged = this.isUserLoggedIn();
   }
 
@@ -68,9 +73,13 @@ export class UserProjectsComponent implements OnInit {
 
   subscribeToFilteredProjects() {
     this.projectToFilteredSubscription = this.filterService
-      .getFilteredProjects()
-      .subscribe(projects => {
-        this.projects = [...projects];
+      .getFilteredOptions()
+      .subscribe(options => {
+        this.filteredProjects = this.projects.filter((project: Project) => {
+          console.log(project);
+          console.log(options.search);
+          return project.title.toLocaleLowerCase().includes(options.search.toLocaleLowerCase());
+        });
       });
   }
 }
