@@ -78,10 +78,6 @@ export class ProjectInfoComponent implements OnInit {
     this.isUpdateActivated = false;
   }
 
-  hasEnoughVerticalPlace(top) {
-    return top <= 290;
-  }
-
   showEditModal(project, target) {
     const infoProjectDOMElement =
       target.parentElement.parentElement.parentElement.parentElement;
@@ -89,10 +85,6 @@ export class ProjectInfoComponent implements OnInit {
     const left = infoProjectDOMElement.offsetLeft;
     const width = infoProjectDOMElement.offsetWidth;
     const height = infoProjectDOMElement.offsetHeight;
-
-    if (!this.hasEnoughVerticalPlace(top)) {
-      top = 127;
-    }
     const cardinalContainerPosition = {
       top,
       left,
