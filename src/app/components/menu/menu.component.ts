@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProfileService } from '../../services/profile/profile.service';
 
@@ -10,6 +10,8 @@ import { ProfileService } from '../../services/profile/profile.service';
 export class MenuComponent implements OnInit {
 
   public isUserLogged = false;
+  @ViewChild('toggleMenu')
+  toggleMenu;
 
   constructor(private router: Router, private profileService: ProfileService) {}
 
@@ -27,6 +29,7 @@ export class MenuComponent implements OnInit {
     this.profileService.logout();
     this.isUserLogged = false;
     this.router.navigate(['/']);
+    this.closeMenuToggle();
   }
 
   onLogin() {
@@ -36,6 +39,7 @@ export class MenuComponent implements OnInit {
   redirectToUserProjects() {
     const username = this.getCurrentUserName();
     this.router.navigate([`user/${username}`]);
+    this.closeMenuToggle();
   }
 
   getCurrentUserName() {
@@ -43,5 +47,9 @@ export class MenuComponent implements OnInit {
       return ProfileService.getCurrentUserToken().name;
     }
     return '';
+  }
+
+  closeMenuToggle() {
+    this.toggleMenu.nativeElement.checked = false;
   }
 }

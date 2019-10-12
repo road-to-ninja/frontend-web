@@ -4,7 +4,7 @@
         Road to ninja
       </a>
   </div>
-  <input class="right" type="checkbox" id="burger-menu-toggle">
+  <input class="right" type="checkbox" id="burger-menu-toggle" #toggleMenu>
   <label for="burger-menu-toggle" class="burger-menu navbar-item lateral right" *ngIf="this.isUserLogged; else login_bouton">
       <i class="fa fa-bars fa-3x open-icon"></i>
       <i class="fas fa-times fa-3x close-icon"></i>
