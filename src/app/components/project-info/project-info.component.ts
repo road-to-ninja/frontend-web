@@ -79,7 +79,7 @@ export class ProjectInfoComponent implements OnInit {
   }
 
   hasEnoughVerticalPlace(top) {
-    return top <= 275;
+    return top <= 290;
   }
 
   showEditModal(project, target) {
