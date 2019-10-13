@@ -49,6 +49,7 @@
   font-size: 1.2em;
   color: white;
   border-style: none;
+  cursor: pointer;
 }
 
 .btn-sign-in:hover {
