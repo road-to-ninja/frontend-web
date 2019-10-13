@@ -22,19 +22,20 @@
   list-style-type: none;
 }
 
-.form-set input {
-  width: 100%;
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;
-  padding: 0 0 0 10px;
-  border: 0;
-  font-size: 1.2em;
-}
-
 .form-field {
   margin-bottom: 30px;
   height: 40px;
+  width: 100%;
+  font-size: 1.2em;
+  padding: 0 0 0 10px;
+  background-color: rgb(40, 46, 104);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(39, 199, 236);
+  border-radius: 3px;
+}
+
+.form-field:focus {
+  border-color: rgb(63, 232, 84);
 }
 
 .form-set {
