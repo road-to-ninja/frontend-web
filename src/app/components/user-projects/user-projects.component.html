@@ -7,7 +7,7 @@
       Projects owner: {{ user.name | titlecase }}
     </span>
     <span class="create-project-icon">
-        <app-button-project-add></app-button-project-add>
+        <app-button-project-add *ngIf="isUserLogged"></app-button-project-add>
     </span>
   </div>
   <div class="row" *ngIf="!(projects.length > 0)">
