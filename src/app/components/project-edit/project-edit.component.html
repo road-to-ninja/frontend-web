@@ -1,7 +1,7 @@
 <div [formGroup]="projectForm" class="editor-title">
   <input autofocus placeholder="title (required)" [(ngModel)]="projectBeingUpdated.title" class="editior-input"
          formControlName="title" type="text" id="title"
-         required value="{{ projectBeingUpdated.title | titlecase }}">
+         required value="{{ projectBeingUpdated.title }}">
 
 </div>
 <div class="editor-description">
