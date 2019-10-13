@@ -23,6 +23,7 @@
 }
 
 .form-field {
+  box-sizing: border-box;
   margin-bottom: 30px;
   height: 40px;
   width: 100%;
